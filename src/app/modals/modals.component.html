@@ -1,0 +1,38 @@
+		<!-- Modal -->
+		<div class="modal fade" id="exampleModalCenter" style="padding: unset;">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<figure id="modal">
+					</figure>
+				</div>
+			</div>
+		</div>
+
+        	<!-- Projects-->
+		<section class="build-to-win padding-body">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 offset-md-2">
+						<div class="main-heading">
+							<h2 class="project-title">Take A Look at The Projects We’re Super Proud of </h2>
+							<p class="project-description">Still not convinced that we’re the ones to go for? We believe in letting our work speak for itself! Here are some of the best projects we have delivered to date. </p>
+						</div>
+					</div>
+
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-4 col-sm-6 align-center" *ngFor="let image of images; let i = index">
+								<li>
+									<figure>
+										<img class="image-for-project" data-toggle="modal" data-target="#exampleModalCenter" (click)="generateImageForModal(i+1)" src="assets/Small and optimised portfolio/{{i+1}}.jpg">
+									</figure>
+								</li>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>

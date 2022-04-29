@@ -1,0 +1,45 @@
+
+	<section class="build-to-win best-seller-contener padding-body" style="background: white(214, 25, 25, 0.89);">
+		<div class="container baner" >
+			<div class="row inerservice-banner">
+				<!--left side-->
+				<div class="col-lg" >
+					<!--left side-->
+					<div class="col-lg left-side">
+						<span class="mb-1 header-subtitle" style="color: black">Small Business, Corporate Website Design & Enterprise Web Solutions</span>
+						<h2 class="mb-5 header-tytle" style="color: black">A well-branded business website brings marketing strength to your company.</h2>
+						<ul class="text-ul">
+							<li style="color: black">Complete custom design and creative password-protected content</li>
+							<li style="color: black">Easy-to-use content management system</li>
+							<li style="color: black">Get a custom site optimized for SEO and mobile</li>
+							<li style="color: black">Get noticed by your audience at the first glance</li>
+						</ul>
+					
+					</div>
+				</div>
+				<!--right side-->
+				<div class="col-lg">
+					<div class="main-block">
+						<form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+							<h3>Tell us more</h3>
+							<div class="info">
+								<input class="fname" formControlName="name" type="text" name="name" placeholder="Full name">
+								<input type="email" formControlName="sender" name="name" placeholder="Email">
+								<input type="number" formControlName="number" name="name" placeholder="Phone number">
+							</div>
+							<p>Project description</p>
+
+							<div>
+								<textarea rows="3" formControlName="message" placeholder="Enter your message..." ></textarea>
+							</div>
+
+							<div class="form-group" *ngIf="emailSent">
+								<label>Thank you for your email, give use some time to reply.</label>
+							</div>
+							<button *ngIf="!emailSent" type="submit" [disabled]="contactForm.disabled || !(contactForm.dirty && contactForm.valid)">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "email-handler-e3a22": {
+      "hosting": {
+        "Promo": [
+          "email-handler-e3a22"
+        ]
+      }
+    }
+  }
+}
